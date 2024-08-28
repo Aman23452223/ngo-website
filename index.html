@@ -1,0 +1,198 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hope for Children | NGO Website</title>
+    <link rel="stylesheet" href="style.css">
+
+  
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#our-work">Our Work</a></li>
+                <li><a href="#get-involved">Get Involved & Help</a></li>
+                <li><a href="#donate">Donate</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <img src="ngo_logo.jpeg" alt="Hope for Children Logo">
+            <p><h2>Shri Shradhanand Anathalaya, Nagpur
+            </h2></p>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Hope for Children</h1>
+            <p>Empowering orphaned and vulnerable children to reach their full potential</p>
+            <button class="btn">Learn More</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are a non-profit organization dedicated to providing care and support to orphaned and vulnerable children.</p>
+        </div>
+        <img src="inner-slide01.jpg" alt="About Us Image" class="img">
+        <img src="inner-slide04.jpg" alt="About Us Image" class="img">
+        <img src="inner-slide02.jpg" alt="About Us Image" class="img">
+    </section>
+
+    <!-- Our Work Section -->
+    <section id="our-work" class="our-work">
+        <div class="container">
+            <h2>Our Work</h2>
+            <ul>
+                <li>
+                    <i class="fas fa-home"></i>
+                    <h3>Orphanage Care</h3>
+                    <p>We provide a safe and nurturing environment for orphaned children.</p>
+                </li>
+                <li>
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Education</h3>
+                    <p>We support education and skills development for vulnerable children.</p>
+                </li>
+                <li>
+                    <i class="fas fa-medkit"></i>
+                    <h3>Healthcare</h3>
+                    <p>We provide access to medical care and health services for children in need.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section id="get-involved" class="get-involved">
+        <div class="container">
+            <h2>Get Involved & Help </h2>
+            <p>Join us in making a difference in the lives of orphaned and vulnerable children.</p>
+            <div id="dropdown-container" style="text-align: center;">
+            <button id="btn">Volunteer</button>
+            <button id="dropdown-button">Help by Donating<br>
+              <select id="myDropdown">
+                <option value="">Select an option</option>
+                <option value="option1">Clothes</option>
+                <option value="option2">Books</option>
+                <option value="option3">Sanitary pads</option>
+                <option value="option4">Food</option>
+                <option value="option5">Others</option>
+              </select>
+              <button>Submit</button>
+              </div>
+            </button>
+            <script>
+              document.getElementById('dropdown-button').addEventListener('click', function() {
+                document.getElementById('dropdown-container').style.display = 'block';
+              });
+            </script>
+        </div>
+
+        <br>
+        <h2>Want to Celebrate with them </h2>
+        Drop time & Time:-
+        <br>
+        <input type="datetime-local" id="time">
+        <button id="time">Submit</button>
+    </section>
+
+    <section>
+        <h1>Join Workshop</h1>
+        <br>
+        <button id="openFormButton" class="btn">Join</button>
+
+        <div id="popupForm" class="popup-form-container">
+            <div class="form-container">
+                <span id="closeFormButton" class="close-button">&times;</span>
+                <h2 class="form-title">Basic Form</h2>
+                <form action="index.html" method="GET">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- Donate Section -->
+    <section id="donate" class="donate">
+        <div class="container">
+            <h2>Donate</h2>
+            <p>Your donation can help provide food, shelter, and education to a child in need.</p>
+            <form>
+                <input type="text" placeholder="Amount">
+                <button class="btn">Donate Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us to learn more about our organization and how you can get involved.</p>
+            <ul>
+                <li><i class="fas fa-phone"></i> TelephoneNo: 0712-2222959
+                </li>
+                <li><i class="fas fa-envelope"></i> <a href="shradhanandanathalaya45@gmail.com">shradhanandanathalaya45@gmail.com</a></li>
+                <li><i class="fas fa-map-marker-alt"></i> Shri Shradhanand Anathalaya,
+                    123, Shradhanandpeth,
+                    Nagpur-410022.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Hope for Children | All Rights Reserved</p>
+    </footer>
+
+    <script>
+      
+        const popupForm = document.getElementById('popupForm');
+        const openFormButton = document.getElementById('openFormButton');
+        const closeFormButton = document.getElementById('closeFormButton');
+        
+        
+        openFormButton.addEventListener('click', () => {
+            popupForm.style.display = 'flex';
+        });
+        
+        
+        closeFormButton.addEventListener('click', () => {
+            popupForm.style.display = 'none';
+        });
+        
+        
+        window.addEventListener('click', (event) => {
+            if (event.target === popupForm) {
+                popupForm.style.display = 'none';
+            }
+        });
+        
+            </script>
+</body>
+</html>
